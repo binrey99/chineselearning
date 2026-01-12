@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9C4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/coin1" />
+
+            <TextView
+                android:id="@+id/tvGoldInShop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Vàng: 0"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FBC02D" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/ivWheel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/wheel_bg" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="-10dp"
+                android:rotation="180"
+                android:src="@drawable/wheel_arrow"
+                android:translationZ="10dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSpin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="QUAY NGAY (20 💰)"
+            android:backgroundTint="#FF7043"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BỘ SƯU TẬP LINH VẬT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <GridLayout
+            android:id="@+id/gridPets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true" />
+
+        <Button
+            android:id="@+id/btnBackFromShop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="QUAY LẠI"
+            android:backgroundTint="#9E9E9E" />
+
+    </LinearLayout>
+</ScrollView>

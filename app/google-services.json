@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "695862967612",
+    "firebase_url": "https://chineselearning-998ba-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "chineselearning-998ba",
+    "storage_bucket": "chineselearning-998ba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695862967612:android:90335885b617622499f239",
+        "android_client_info": {
+          "package_name": "com.example.chineselearning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_zp5yB-GyuTqhKLRkmQ2AUrFjT6GaxUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

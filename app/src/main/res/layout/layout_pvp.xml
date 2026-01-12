@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <!-- Giao diện Chọn mức cược -->
+    <LinearLayout
+        android:id="@+id/layoutPvPBet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHỌN MỨC CƯỢC"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2D3436"
+            android:layout_marginBottom="30dp" />
+
+        <Button
+            android:id="@+id/btnBet10"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CƯỢC 10 VÀNG"
+            android:backgroundTint="#FFC107"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/btnBet50"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CƯỢC 50 VÀNG"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="10dp"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/btnBet100"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CƯỢC 100 VÀNG"
+            android:backgroundTint="#F44336"
+            android:layout_marginBottom="30dp"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/btnBackFromBet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUAY LẠI"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="#636E72" />
+    </LinearLayout>
+
+    <!-- Giao diện Tìm đối thủ -->
+    <LinearLayout
+        android:id="@+id/layoutPvPMatching"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:indeterminateTint="#FF5722" />
+
+        <TextView
+            android:id="@+id/tvMatchStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ĐANG TÌM ĐỐI THỦ (10 💰)..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2D3436" />
+
+        <TextView
+            android:id="@+id/tvMatchTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btnCancelMatching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="HỦY TÌM KIẾM"
+            android:backgroundTint="#636E72" />
+    </LinearLayout>
+
+    <!-- Giao diện Thi đấu -->
+    <LinearLayout
+        android:id="@+id/layoutPvPBattle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <!-- Header: Thông tin 2 người chơi & Timer -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Người chơi (Bạn) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivPvPMyAvatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@android:drawable/sym_def_app_icon"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        android:padding="2dp"
+                        android:background="#FF5722"/>
+                    <TextView
+                        android:id="@+id/tvPvPMyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BẠN"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvPvPMyScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0/10"
+                        android:textColor="#FF5722"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VS"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#636E72"
+                    android:layout_marginHorizontal="20dp"/>
+
+                <!-- Đối thủ -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivPvPOpponentAvatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@android:drawable/sym_def_app_icon"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        android:padding="2dp"
+                        android:background="#D1D1D1"/>
+                    <TextView
+                        android:id="@+id/tvPvPOpponentName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ĐỐI THỦ"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvPvPOpponentScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0/10"
+                        android:textColor="#636E72"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvBattleTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thời gian: 60s"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D63031"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvPvPHanzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="字"
+                    android:textSize="80sp"
+                    android:textColor="#2D3436"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/kaiu"/>
+                <TextView
+                    android:id="@+id/tvPvPPinyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="zì"
+                    android:textColor="#0984E3"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button android:id="@+id/btnPvPOpt1" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginBottom="8dp" android:text="Đáp án 1" android:backgroundTint="#FFFFFF" android:textColor="#2D3436" app:cornerRadius="12dp" android:textAllCaps="false"/>
+        <Button android:id="@+id/btnPvPOpt2" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginBottom="8dp" android:text="Đáp án 2" android:backgroundTint="#FFFFFF" android:textColor="#2D3436" app:cornerRadius="12dp" android:textAllCaps="false"/>
+        <Button android:id="@+id/btnPvPOpt3" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginBottom="8dp" android:text="Đáp án 3" android:backgroundTint="#FFFFFF" android:textColor="#2D3436" app:cornerRadius="12dp" android:textAllCaps="false"/>
+        <Button android:id="@+id/btnPvPOpt4" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginBottom="8dp" android:text="Đáp án 4" android:backgroundTint="#FFFFFF" android:textColor="#2D3436" app:cornerRadius="12dp" android:textAllCaps="false"/>
+
+    </LinearLayout>
+</FrameLayout>

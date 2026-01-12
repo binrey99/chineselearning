@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Học Tiếng Trung Cùng Tôi</string>
+    <string name="main_title">HỌC TIẾNG TRUNG</string>
+    <string name="menu_learn_vocab">1. HỌC TỪ VỰNG</string>
+    <string name="menu_learn_phrases">2. HỌC MẪU CÂU</string>
+    <string name="menu_quiz_phrases">3. ÔN TẬP MẪU CÂU</string>
+    <string name="menu_review_starred">4. ÔN TẬP TỪ VỰNG</string>
+    <string name="menu_personal_library">5. THƯ VIỆN CÁ NHÂN</string>
+    <string name="menu_progress">6. TIẾN ĐỘ HỌC TẬP</string>
+    <string name="menu_social">7. KẾT NỐI BẠN BÈ</string>
+    
+    <string name="btn_exit">THOÁT</string>
+    <string name="btn_prev">TRƯỚC</string>
+    <string name="btn_clear">XÓA</string>
+    <string name="btn_next">TIẾP</string>
+    <string name="btn_back">QUAY LẠI</string>
+    
+    <string name="label_score">ĐIỂM: %d</string>
+    <string name="label_question">Câu hỏi: %1$d/%2$d</string>
+    <string name="label_mastered">Đã thành thạo</string>
+    <string name="label_vocab">TỪ VỰNG</string>
+    <string name="label_phrases">MẪU CÂU</string>
+    <string name="label_mastered_list">Danh sách đã thuộc (Đúng 5 lần)</string>
+    
+    <string name="msg_not_enough_data">Không đủ dữ liệu để bắt đầu kiểm tra!</string>
+    <string name="msg_mastered_all">Chúc mừng! Bạn đã thành thạo tất cả các mục ở đây!</string>
+    <string name="msg_starred_at_least">Bạn cần đánh dấu ít nhất 4 mục!</string>
+    <string name="msg_wrong_at_least">Bạn cần ít nhất 4 mục sai để ôn tập!</string>
+    
+    <string name="dialog_completed">Hoàn thành</string>
+    <string name="dialog_max_streak">Chuỗi đúng nhất: %d 🔥</string>
+</resources>

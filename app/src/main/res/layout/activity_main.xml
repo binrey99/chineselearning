@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivMainMenuBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/layoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/coin1" />
+
+                    <TextView
+                        android:id="@+id/tvGoldCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text=": 0"
+                        android:textColor="#FFD700"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivShop"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_shop" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/main_title"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnGoToLearn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#7B1FA2"
+                android:text="@string/menu_learn_vocab"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnCommonPhrases"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#03A9F4"
+                android:text="@string/menu_learn_phrases"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnGoToQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/menu_quiz_phrases"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnPvP"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#FF5722"
+                android:text="THI ĐẤU ĐỐI KHÁNG"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnReviewStarred"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#FFD700"
+                android:text="@string/menu_review_starred"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnPersonalLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#0984E3"
+                android:text="@string/menu_personal_library"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnViewProgress"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#FFF9C4"
+                android:text="@string/menu_progress"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/btnSocial"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:backgroundTint="#E91E63"
+                android:text="@string/menu_social"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:elevation="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@Code by Bin"
+                android:textColor="#636E72"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/containerLearn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_learn_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_quiz_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerShop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_shop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerPhrases"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_phrases_content" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_progress" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerSocial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_social" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerPersonal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_personal_library" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containerPvP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#FFFFFF">
+        <include layout="@layout/layout_pvp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
